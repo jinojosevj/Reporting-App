@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5CD0467C-2176-4DF4-97D6-83CAD50DD2D5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReportingTool</RootNamespace>
+    <AssemblyName>ReportingTool</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EditableDropDownList, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Projects\HRMSWeb\bin\EditableDropDownList.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel.4.5, Version=2.1.2.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Excel.4.5.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ICSharpCode.SharpZipLib.dll.0.85.4.369\lib\net20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Interop.Microsoft.Office.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Allocation.aspx" />
+    <Content Include="BestSellerReport.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\Excel.4.5.dll" />
+    <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\Interop.Microsoft.Office.Core.dll" />
+    <Content Include="bin\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="bin\ReportingTool.dll" />
+    <Content Include="bin\ReportingTool.pdb" />
+    <Content Include="CashFlowDynamic.aspx" />
+    <Content Include="CashFlowTATI.aspx" />
+    <Content Include="css\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\component.css" />
+    <Content Include="css\default.css" />
+    <Content Include="css\ie8.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jquery.fancybox.css" />
+    <Content Include="css\recaptcha.css" />
+    <Content Include="css\responsiveslides.css" />
+    <Content Include="css\shadowbox.css" />
+    <Content Include="css\style-admin.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\themes\themes.css" />
+    <Content Include="css\themes\themes.gif" />
+    <Content Include="css\themes\themes.html" />
+    <Content Include="CustomerCount.aspx" />
+    <Content Include="DCReports.aspx" />
+    <Content Include="DcStock.aspx" />
+    <Content Include="DcStockReport.aspx" />
+    <Content Include="ExportDC.aspx" />
+    <Content Include="FinanceReports.aspx" />
+    <Content Include="fonts\PTSans-Narrow.svg" />
+    <Content Include="fonts\YanoneKaffeesatz-Regular.svg" />
+    <Content Include="HighClosingValue.aspx" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="ImportDC.aspx" />
+    <Content Include="InventoryReport.aspx" />
+    <Content Include="InvoiceReport.aspx" />
+    <Content Include="ItemInfo.aspx" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\classie.js" />
+    <Content Include="js\css-filters-polyfill.js" />
+    <Content Include="js\cssParser.js" />
+    <Content Include="js\curvycorners.src.js" />
+    <Content Include="js\jquery-1.8.3.min.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.fancybox.js" />
+    <Content Include="js\modalEffects.js" />
+    <Content Include="js\modernizr.custom.js" />
+    <Content Include="js\responsiveslides.js" />
+    <Content Include="js\shadowbox.js" />
+    <Content Include="MatalanSalesAndStock.aspx" />
+    <Content Include="MISReports.aspx" />
+    <Content Include="MYMISReports.aspx" />
+    <Content Include="MYSales.aspx" />
+    <Content Include="PLReport.aspx" />
+    <Content Include="RetailKPI.aspx" />
+    <Content Include="RetailKpiTati.aspx" />
+    <Content Include="ShipmentReport.aspx" />
+    <Content Include="StockStatus.aspx" />
+    <Content Include="StockStatusTati.aspx" />
+    <Content Include="StockStatusVAT.aspx" />
+    <Content Include="StockSummary.aspx" />
+    <Content Include="TATIMISReports.aspx" />
+    <Content Include="TatiStockAndSales.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="TransferOrder.aspx" />
+    <Content Include="Update.aspx" />
+    <Content Include="UpdateTatiTables.aspx" />
+    <Content Include="Visitors.aspx" />
+    <Content Include="VisitorsTati.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Allocation.aspx.cs">
+      <DependentUpon>Allocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Allocation.aspx.designer.cs">
+      <DependentUpon>Allocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BAL\Common.cs" />
+    <Compile Include="BAL\CsvReader.cs" />
+    <Compile Include="BAL\GetStockDetails.cs" />
+    <Compile Include="BAL\StringConverter.cs" />
+    <Compile Include="BAL\TatiBAL.cs" />
+    <Compile Include="BestSellerReport.aspx.cs">
+      <DependentUpon>BestSellerReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BestSellerReport.aspx.designer.cs">
+      <DependentUpon>BestSellerReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CashFlowDynamic.aspx.cs">
+      <DependentUpon>CashFlowDynamic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CashFlowDynamic.aspx.designer.cs">
+      <DependentUpon>CashFlowDynamic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CashFlowTATI.aspx.cs">
+      <DependentUpon>CashFlowTATI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CashFlowTATI.aspx.designer.cs">
+      <DependentUpon>CashFlowTATI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerCount.aspx.cs">
+      <DependentUpon>CustomerCount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerCount.aspx.designer.cs">
+      <DependentUpon>CustomerCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DatabaseConnection.cs" />
+    <Compile Include="DAL\DatabaseConnectionDC.cs" />
+    <Compile Include="DAL\DatabaseConnectionTati.cs" />
+    <Compile Include="DAL\StockDetails.cs" />
+    <Compile Include="DAL\TatiDAL.cs" />
+    <Compile Include="DCReports.aspx.cs">
+      <DependentUpon>DCReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DCReports.aspx.designer.cs">
+      <DependentUpon>DCReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DcStock.aspx.cs">
+      <DependentUpon>DcStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DcStock.aspx.designer.cs">
+      <DependentUpon>DcStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DcStockReport.aspx.cs">
+      <DependentUpon>DcStockReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DcStockReport.aspx.designer.cs">
+      <DependentUpon>DcStockReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportDC.aspx.cs">
+      <DependentUpon>ExportDC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExportDC.aspx.designer.cs">
+      <DependentUpon>ExportDC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceReports.aspx.cs">
+      <DependentUpon>FinanceReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinanceReports.aspx.designer.cs">
+      <DependentUpon>FinanceReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HighClosingValue.aspx.cs">
+      <DependentUpon>HighClosingValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HighClosingValue.aspx.designer.cs">
+      <DependentUpon>HighClosingValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportDC.aspx.cs">
+      <DependentUpon>ImportDC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportDC.aspx.designer.cs">
+      <DependentUpon>ImportDC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryReport.aspx.cs">
+      <DependentUpon>InventoryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryReport.aspx.designer.cs">
+      <DependentUpon>InventoryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceReport.aspx.cs">
+      <DependentUpon>InvoiceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvoiceReport.aspx.designer.cs">
+      <DependentUpon>InvoiceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemInfo.aspx.cs">
+      <DependentUpon>ItemInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemInfo.aspx.designer.cs">
+      <DependentUpon>ItemInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MatalanSalesAndStock.aspx.cs">
+      <DependentUpon>MatalanSalesAndStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MatalanSalesAndStock.aspx.designer.cs">
+      <DependentUpon>MatalanSalesAndStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MISReports.aspx.cs">
+      <DependentUpon>MISReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MISReports.aspx.designer.cs">
+      <DependentUpon>MISReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MYMISReports.aspx.cs">
+      <DependentUpon>MYMISReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MYMISReports.aspx.designer.cs">
+      <DependentUpon>MYMISReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MYSales.aspx.cs">
+      <DependentUpon>MYSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MYSales.aspx.designer.cs">
+      <DependentUpon>MYSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PLReport.aspx.cs">
+      <DependentUpon>PLReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PLReport.aspx.designer.cs">
+      <DependentUpon>PLReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RetailKPI.aspx.cs">
+      <DependentUpon>RetailKPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RetailKPI.aspx.designer.cs">
+      <DependentUpon>RetailKPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RetailKpiTati.aspx.cs">
+      <DependentUpon>RetailKpiTati.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RetailKpiTati.aspx.designer.cs">
+      <DependentUpon>RetailKpiTati.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShipmentReport.aspx.cs">
+      <DependentUpon>ShipmentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShipmentReport.aspx.designer.cs">
+      <DependentUpon>ShipmentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StockStatus.aspx.cs">
+      <DependentUpon>StockStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockStatus.aspx.designer.cs">
+      <DependentUpon>StockStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockStatusTati.aspx.cs">
+      <DependentUpon>StockStatusTati.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockStatusTati.aspx.designer.cs">
+      <DependentUpon>StockStatusTati.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockStatusVAT.aspx.cs">
+      <DependentUpon>StockStatusVAT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockStatusVAT.aspx.designer.cs">
+      <DependentUpon>StockStatusVAT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockSummary.aspx.cs">
+      <DependentUpon>StockSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockSummary.aspx.designer.cs">
+      <DependentUpon>StockSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TATIMISReports.aspx.cs">
+      <DependentUpon>TATIMISReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TATIMISReports.aspx.designer.cs">
+      <DependentUpon>TATIMISReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TatiStockAndSales.aspx.cs">
+      <DependentUpon>TatiStockAndSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TatiStockAndSales.aspx.designer.cs">
+      <DependentUpon>TatiStockAndSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransferOrder.aspx.cs">
+      <DependentUpon>TransferOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransferOrder.aspx.designer.cs">
+      <DependentUpon>TransferOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTatiTables.aspx.cs">
+      <DependentUpon>UpdateTatiTables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateTatiTables.aspx.designer.cs">
+      <DependentUpon>UpdateTatiTables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Visitors.aspx.cs">
+      <DependentUpon>Visitors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Visitors.aspx.designer.cs">
+      <DependentUpon>Visitors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorsTati.aspx.cs">
+      <DependentUpon>VisitorsTati.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VisitorsTati.aspx.designer.cs">
+      <DependentUpon>VisitorsTati.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\themes\Thumbs.db" />
+    <Content Include="fonts\PTSans-Narrow.eot" />
+    <Content Include="fonts\PTSans-Narrow.ttf" />
+    <Content Include="fonts\PTSans-Narrow.woff" />
+    <Content Include="fonts\YanoneKaffeesatz-Regular.afm" />
+    <Content Include="fonts\YanoneKaffeesatz-Regular.eot" />
+    <Content Include="fonts\YanoneKaffeesatz-Regular.ttf" />
+    <Content Include="fonts\YanoneKaffeesatz-Regular.woff" />
+    <Content Include="Site.Master" />
+    <Content Include="packages.config" />
+    <Content Include="bin\ReportingTool.dll.config" />
+    <None Include="Properties\PublishProfiles\ReportingTool.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FileImport\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56447</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56447/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://192.168.0.21</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

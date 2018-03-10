@@ -1,0 +1,191 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="ReportingTool.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head id="head1" runat='server'>
+     <link rel="icon" 
+      type="image/png" 
+      href="images/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BTC Fashion Reporting Tool</title>
+    <!-- CSS -->
+    <link href="~/css/style-admin.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/css/responsiveslides.css" />
+    <!-- JS -->
+    <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.js" type="text/javascript"></script>
+
+  
+     <link rel="stylesheet" href="~/css/jquery-ui.css" />
+        
+</head>
+<body>
+    <form id="form1" runat="server">
+     
+    <div class="clear">
+    </div>
+    <header>
+    <div class="container clearfix">
+  <div class="row-fluid show-grid">
+  <div class="span4">
+    <a title="Matalan Reporting Tool"><img src="images/logo.jpg" class="featurette-image" alt="" style="border:none;" /></a>
+    </div>
+    <div class="text-logout-box">
+    
+    </div>
+    <div class="text-admin-panel">
+   BTC Fashion Reporting Tool
+    </div>
+    
+  </div></div>
+</header>
+    <div class="divider">
+    </div>
+    <div class="adm-menu-wrapper">
+        <div id="cssmenu">
+           
+            <%-- menu starts--%>
+             <ul>
+        <li class='has-sub' id="mnReport"><a href='StockStatus.aspx'><span>Matalan Reports</span></a>
+            <ul>
+                <li id="liUpdate"><a href='Update.aspx'><span>Update Tables</span></a></li>
+                <li id="liStockStatus"><a href='StockStatus.aspx'><span>Stock Status</span></a></li>
+                <li id="liVisitor"><a href='Visitors.aspx'><span>Visitors</span></a></li>
+                <li id="liInventory"><a href='InventoryReport.aspx'><span>Inventory</span></a></li>
+                
+                <li id="liBestSeller"><a href='BestSellerReport.aspx'><span>Best Seller</span></a></li>
+                <li id="liRetailKpi"><a href='RetailKPI.aspx'><span>Retail KPI</span></a></li>
+                <li id="liCustomer"><a href='CustomerCount.aspx'><span>Customer Count</span></a></li>
+                <li id="liHighClosing"><a href='HighClosingValue.aspx'><span>High Closing Value</span></a></li>
+
+                <li id="liItemInfo"><a href='ItemInfo.aspx'><span>Item Info</span></a></li>
+                <li id="liPLReport"><a href='PLReport.aspx'><span>P&L Report</span></a></li>
+                <li id="liInvReport"><a href='InvoiceReport.aspx'><span>Invoice Report</span></a></li>
+                 <li id="liStockReport"><a href='MatalanSalesAndStock.aspx'><span>Stock&Sales</span></a></li>
+
+            </ul>
+        </li>
+
+         
+        <li class='has-sub' id="mnTati"><a href='RetailKpiTati.aspx'><span>TATI Reports</span></a>
+            <ul>
+                
+                <li><a href='UpdateTatiTables.aspx'><span>Update Tables</span></a></li>
+                <li><a href='RetailKpiTati.aspx'><span>Retail KPI</span></a></li>
+                <li><a href='VisitorsTati.aspx'><span>Visitors</span></a></li>
+                <li><a href='StockStatusTati.aspx'><span>Stock Status</span></a></li>
+
+                <li><a href='TatiStockAndSales.aspx'><span>Stock & Sales</span></a></li>
+                <li><a href='CashFlowTATI.aspx'><span>Cash Flow</span></a></li>
+                <li><a href='ShipmentReport.aspx'><span>Shipment Report</span></a></li>
+                <li><a href='CashFlowDynamic.aspx'><span>Cash Flow Dynamic</span></a></li>
+
+            </ul>
+        </li>
+
+           <li class='has-sub' id="mnDCStock"><a href='DCStock.aspx'><span>DC Stock</span></a>
+            <ul>
+                
+                <li><a href='DCStock.aspx'><span>DC Stock</span></a></li>
+                <li><a href='MISReports.aspx'><span>MIS Reports</span></a></li>
+                <li><a href='DCReports.aspx'><span>DC Reports</span></a></li>
+                <li><a href="MYMISReports.aspx"><span>MY MIS Reports</span></a></li>
+
+                <li><a href="TATIMISReports.aspx"><span>TATI MIS Reports</span></a></li>
+
+            </ul>
+        </li>
+         
+         <li class='has-sub' id="mnDCApp"><a href='ImportDC.aspx'><span>DC App</span></a>
+            <ul>
+                
+                <li><a href='Allocation.aspx'><span>Allocation</span></a></li>
+                <li><a href='ImportDC.aspx'><span>Import DC</span></a></li>
+                <li><a href='ExportDC.aspx'><span>Export DC</span></a></li>
+            </ul>
+        </li>
+
+                 <%--
+        <li class='has-sub' id="mnDownload"><a href='DownloadList.aspx'><span>Downloads</span></a>
+            <ul>
+                <li><a href='DownloadList.aspx'><span>List</span></a></li>
+                <li><a href='DownloadAdd.aspx'><span>Add New</span></a></li>
+            </ul>
+        </li>
+        <li class='has-sub' id="mnClient"><a href='ClientList.aspx'><span>Clients</span></a>
+            <ul>
+                <li><a href='ClientList.aspx'><span>List</span></a></li>
+            </ul>
+        </li>
+        <li class='has-sub' id="mnSubscriber"><a href='SuscriberList.aspx'><span>Subscribers</span></a>
+            <ul>
+                <li><a href='SuscriberList.aspx'><span>List</span></a></li>
+            </ul>
+        </li>
+        <li class='has-sub' id="mnAdminUser"><a href='AdminUserList.aspx'><span>Admin Users</span></a>
+            <ul>
+                <li><a href='AdminUserList.aspx'><span>List</span></a></li>
+                <li><a href='AdminUserAdd.aspx'><span>Add New</span></a></li>
+            </ul>
+        </li>
+        <li class='has-sub' id="mnRoles"><a href='RoleList.aspx'><span>Roles</span></a>
+            <ul>
+                <li><a href='RoleList.aspx'><span>List</span></a></li>
+                <li><a href='RoleAdd.aspx'><span>Add New</span></a></li>
+            </ul>
+        </li>
+        <li class='has-sub' id="mnService"><a><span>Our services</span></a>
+            <ul class="sub-two">
+        <li><a href="CorpFinanceView.aspx">Corporate Finance</a>
+         <ul class="sub-third">
+                <li><a href='CorpFinanceView.aspx'><span>View</span></a></li>
+                <li><a href='CorpFinanceAdd.aspx'><span>Add New</span></a></li>
+            </ul>
+        </li>
+        <li><a href='FundsView.aspx'>Funds</a>
+        <ul class="sub-third">
+                <li><a href='FundsView.aspx'><span>View</span></a></li>
+                <li><a href='FundsAdd.aspx'><span>Add New</span></a></li>
+            </ul>
+        </li>
+        <li><a href='AssetsView.aspx'>Assets</a>
+        <ul class="sub-third">
+                <li><a href='AssetsView.aspx'><span>View</span></a></li>
+                <li><a href='AssetsAdd.aspx'><span>Add New</span></a></li>
+            </ul>
+        </li>
+        </ul>
+        </li>
+         <li id="mnCma"><a href='CmaUploadList.aspx'><span>Cma Uploads</span></a>
+            <ul>
+                <li><a href='CmaUploadList.aspx'><span>List</span></a></li>
+                <li><a href='CmaUploadAdd.aspx'><span>Add New</span></a></li>
+            </ul>
+        </li>
+                 --%>
+        
+    </ul>
+            <%-- menu ends--%>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="clear">
+    </div>
+    <div class="row-fluid">
+        <div class="adm-container">
+            <asp:ContentPlaceHolder ID="phdBodyContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="divider">
+        </div>
+        <div class="container footer">
+            <span>&copy; Copyrights 2014 <a href="/">Matalan </a>| Powered by <a href=""
+                target="_blank">Matalan</a> </span>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

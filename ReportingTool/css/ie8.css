@@ -1,0 +1,31 @@
+﻿.navbar .nav > li > a {
+font-family:  Arial;
+font-size: 13px;
+}
+.megamenu h3, .col_3 h3 {
+font-size: 13px;
+font-family: Arial;
+font-weight:normal;
+}
+.quickbox > .quickhead a {
+font-size: 14px;
+font-family: Arial;
+line-height: 16px;
+font-weight: bold;
+}
+.blockshead > a {
+font-size: 16px;
+font-family: Arial;
+line-height: 16px;
+font-weight: bold;
+}
+
+.facebook, .twitter, .linked
+{
+    display: block;
+width:15px;
+height: 15px;
+float: right;
+margin-right: 4px !important;
+
+}

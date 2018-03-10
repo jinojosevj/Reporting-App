@@ -1,0 +1,394 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.saving
+{
+    background-color: #808080;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 2500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.maskDiv {
+
+	/*background:#E8ECFF;*/
+	/*background: #666;*/
+	background:  #000;
+	display:block;
+	z-index:1500;
+    opacity:0.6;
+    position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    src: url('../fonts/PTSans-Narrow.eot');
+    src: url('../fonts/PTSans-Narrow.eot#iefix') format('embedded-opentype'), url('../fonts/PTSans-Narrow.woff') format('woff'), url('../fonts/PTSans-Narrow.ttf') format('truetype'), url('../fonts/PTSans-Narrow.svg#PTSans-Narrow') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.text-admin-panel {
+	font-family: 'PT Sans Narrow', Arial;
+	font-size:18px;
+	clear:both;
+	margin-left:5px;
+	color:#777;
+}
+.text-logout-box {
+	font-family: 'PT Sans Narrow', Arial;
+	font-size:14px;
+	float:right;
+}
+
+.login-box {
+	margin-top:100px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:0;
+	background:#e2d9df;
+	width:400px;
+	overflow:hidden;
+}
+.login-box-text {
+	font-family: 'PT Sans Narrow', Arial;
+	font-size:24px;
+	color:#FFF;
+	padding:10px;
+	width:95%;
+	float:left;
+	background:#693b5f;
+	border-bottom:1px #000 solid;
+}
+.login-box-controls {
+	padding:10px;
+	float:left;
+	width:95%;
+}
+.login-box-controls td {
+	border:none;
+	text-align:left;
+	padding:0;
+	font-family: 'PT Sans Narrow', Arial;
+	font-size:14px;
+}
+.login-box-controls td.right {
+	text-align:right;
+}
+.login-box-controls input[type=submit]:hover {
+	background: #dc526c;
+}
+input[type=text]
+{
+    color:#333;
+    padding:5px;
+    border-radius:5px;
+    border:1px solid #CCC;
+    resize: none;
+}
+input[type=password]
+{
+    color:#333;
+    padding:5px;
+    border-radius:5px;
+    border:1px solid #CCC;
+    resize: none;
+}
+select
+{
+    color:#333;
+    padding:5px;
+    border-radius:5px;
+    border:1px solid #CCC;
+    resize: none;
+}
+textarea 
+{
+    color:#333;
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #CCC;
+    resize: none;
+}
+input[type=submit] {
+	background: #cb415b;
+width: 70px;
+height: 30px !important;
+color: white;
+text-transform: uppercase;
+font-size: 11px;
+border: 0 !important;
+outline: 0;
+padding: 0 15px;
+cursor: pointer !important;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+margin-bottom: 5px;
+text-align: center;
+}
+input[type=submit]:hover 
+{
+    background:#dc526c;
+}
+.adm-container {
+	width:940px;
+	margin:5px 30px;
+	min-height:450px;
+	font-family:Arial Narrow, Helvetica, sans-serif;
+}
+
+.error-msg {
+	background:#FEE7F3;
+	border-radius:5px;
+	border:1px solid #FCA7D8;
+	padding:7px 10px;
+	margin:10px 0;
+	min-width:500px;
+	text-align:left;
+}
+.warning-msg {
+	background:#FFC;
+	border-radius:5px;
+	border:1px solid #FC9;;
+	padding:7px 10px;
+	margin:10px 0;
+	min-width:500px;
+	text-align:left;
+}
+.adm-container h4
+{
+    font-family: 'PT Sans Narrow', Arial;
+	font-size:18px;
+	font-weight:normal;
+	clear:both;
+	color:#555;
+}
+
+/** Admin - Menu **/
+.adm-menu-wrapper {
+	background:#e2d9df;
+}
+#cssmenu {
+	margin:auto;
+	width:960px;
+}
+#cssmenu, #cssmenu > ul {
+	font-family: 'PT Sans Narrow', Arial;
+
+	
+}
+#cssmenu:before, #cssmenu:after, #cssmenu > ul:before, #cssmenu > ul:after {
+	content: '';
+	display: table;
+}
+#cssmenu:after, #cssmenu > ul:after {
+	clear: both;
+}
+#cssmenu {
+	zoom:1;
+	font-weight: normal;
+}
+#cssmenu > ul {
+	background:#e2d9df;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#cssmenu > ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#cssmenu > ul > li {
+	float: left;
+	position: relative;
+}
+#cssmenu > ul > li > a {
+	padding:12px 18px;
+	/*padding:7px 10px;*/
+	display: block;
+	color: #6B3E5D;
+	font-size: 16px;
+	text-decoration:none;
+	line-height: 18px;
+}
+#cssmenu > ul > li:hover > a {
+	background: #ca415d;
+	color:#FFF;
+
+}
+#cssmenu > ul > li > a > span {
+	line-height: 18px;
+}
+#cssmenu > ul > li.active > a, #cssmenu > ul > li > a:active {
+	color:#FFF;
+	background: #d7536e;
+}
+/* Childs */
+
+#cssmenu > ul ul {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 120px;
+	background: #dccad6;
+	
+	margin: 0;
+	padding: 0;
+	z-index: -1;
+}
+#cssmenu > ul li:hover ul {
+	opacity: 1;
+	visibility: visible;
+	margin: 0;
+	color: #000;
+	z-index: 2;
+	top:43px;
+	left: 0;
+}
+
+#cssmenu > ul ul:before {
+	content: '';
+	position: absolute;
+	top: -10px;
+	width: 100%;
+	height: 20px;
+	background: transparent;
+}
+#cssmenu > ul ul li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	border-bottom:1px dotted #FFF;
+	position:relative;
+}
+#cssmenu > ul ul li a {
+	padding: 12px 26px;
+	display: block;
+	color:#6B3E5D;
+	font-size: 16px;
+	text-decoration: none;
+	width: 150px;
+ -webkit-transition: all .35s ease-in-out;
+ -moz-transition: all .35s ease-in-out;
+ -ms-transition: all .35s ease-in-out;
+ transition: all .35s ease-in-out;
+}
+#cssmenu > ul ul li a:hover, #cssmenu > ul ul li:hover {
+	background: #d7536e;
+}
+#cssmenu > ul ul li a:active {
+	background: #dccad6;
+}
+.sub-two li > .sub-third
+{
+    opacity: 0 !important;
+	visibility: hidden !important;
+	position: absolute;
+	top: 0px !important;
+	left: 202px !important;
+	background: #d7536e !important;
+	margin: 0;
+	padding: 0;
+	z-index: -1;
+	color: #fff !important;
+}
+.sub-two li:hover > ul.sub-third {
+	opacity: 1 !important;
+	visibility: visible !important;
+	margin: 0;
+	color: #000;
+	z-index: 20 !important;
+	top:0px !important;
+	left:202px !important;
+}
+.sub-two li:hover > ul.sub-third li a {color:#fff !important;}
+.sub-two li > .sub-third li:hover, .sub-two li > .sub-third li a:hover
+{
+    background:#666 !important;
+    color: #ccc !important;
+}
+ .gridViewPager td
+{
+       padding-left: 4px; 
+        padding-right: 4px;
+        padding-top: 1px;
+        padding-bottom: 2px;
+
+}
+
+/**
+*   OLD CSS
+**/
+body 
+{
+    margin:0;
+}
+
+.footer {height:55px;line-height:55px;color:#797979;font-family: Arial, sans-serif;
+font-size: 12px;}
+a {
+color: #08C;
+text-decoration: none;
+}
+.container {
+  width: 940px;
+margin-right: auto;
+margin-left: auto;
+}
+
+header {
+  display: block;
+}
+
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+    
+  }
+  
+  #lbtnLogOut 
+  {
+      border : 1px solid #0000;
+      background : #ccc;
+      width : 30px;
+      height : 20px;
+  }
+  
+  .show-grid {margin-top: 10px;margin-bottom: 10px;}
+  
+  .span4 
+  {
+      float:left;
+  }
+.divider {background: url(../images/divider.jpg) repeat top center;width:100%;height:6px;}
+  
+  
+.arabic { direction:rtl;}
+#loading {
+     position: absolute; 
+     width: 100%; height: 50%; 
+     background: url('../images/BTC_Loading.gif') no-repeat center center;
+}
+
+
+.StopWatch {
+    margin-bottom: 10px;
+    width: 100px;
+    border-bottom-left-radius: 4px 4px;
+    border-bottom-right-radius: 4px 4px;
+    border-top-left-radius: 4px 4px;
+    border-top-right-radius: 4px 4px;
+    border: 2px solid #EEE;
+    float: left;
+    padding: 0px 8px;
+}
