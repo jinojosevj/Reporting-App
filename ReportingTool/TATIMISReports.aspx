@@ -39,7 +39,7 @@
             Select Report Type:
             </td>
             <td>
-                   <asp:DropDownList ID="ddlType" runat="server">
+                   <asp:DropDownList ID="ddlType" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlType_SelectedIndexChanged">
                         <asp:ListItem Value="1" Text="Stock Status"></asp:ListItem>
                         <asp:ListItem Value="2" Text="Item Info"></asp:ListItem>
                         <asp:ListItem Value="3" Text="Inventory Adjustment"></asp:ListItem>
@@ -52,7 +52,7 @@
             </td>
         </tr>
 
-         <tr>
+         <tr runat="server" id="trCountry" >
             <td>
                 Country:
             </td>
@@ -62,7 +62,7 @@
                     </asp:DropDownList>
             </td>
         </tr>
-          <tr>
+          <tr runat="server" id="trLocation" >
                 <td style="height: 32px">
                    Location :
                 </td>
@@ -75,26 +75,26 @@
                 </td>
             </tr>
 
-         <tr>
+         <tr runat="server" id="trPromotion" visible="false">
             <td>
                 Promotion Numbers
             </td>
             <td>
-                <asp:TextBox ID="txtPromoNumbers" TextMode="MultiLine" Columns="50"  runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPromoNumbers" TextMode="MultiLine" Columns="50"  runat="server" ></asp:TextBox>
             </td>
         </tr>
 
-          <tr>
+          <tr runat="server" id="trFromDate" visible="false">
             <td>
             From Date
             </td>
             <td>
-                <asp:TextBox ID="txtFromDate" TextMode="Date" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtFromDate" TextMode="Date" runat="server"  ></asp:TextBox>
                 
             </td>
         </tr>
 
-          <tr>
+          <tr runat="server" id="trToDate" visible="true">
             <td>
             To Date
             </td>

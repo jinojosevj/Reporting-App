@@ -1493,6 +1493,9 @@ namespace ReportingTool
             objRetailKPI.Location = "0427";
             objRetailKPI.InsertDsrReport();
 
+            objRetailKPI.Location = "0428";
+            objRetailKPI.InsertDsrReport();
+
             objRetailKPI.InsertDsrDivision();
         }
         #endregion Insert Dsr Report
@@ -1811,6 +1814,19 @@ namespace ReportingTool
                 j = 20;
                 if (dtRetailKPI.Rows.Count > 0)
                     WriteToExcelDsrDivision(dtRetailKPI, xlSheet0427, j, "0427");
+
+                objRetailKPI.Location = "0428";
+                dtRetailKPI = objRetailKPI.GetDsrReport();
+                Excel1.Worksheet xlSheet0428 = (Excel1.Worksheet)myExcelWorkbook.Sheets[26];
+                xlSheet0428.Name = "0428";
+                j = 34;
+                if (dtRetailKPI.Rows.Count > 0)
+                    WriteToExcelDsr(dtRetailKPI, xlSheet0428, j, "0428");
+                dtRetailKPI = objRetailKPI.GetDsrDivision();
+                j = 20;
+                if (dtRetailKPI.Rows.Count > 0)
+                    WriteToExcelDsrDivision(dtRetailKPI, xlSheet0428, j, "0428");
+
 
                 Random rnd = new Random();
                 string filePath = Server.MapPath(".") + "\\Reports\\DSR_" + DateTime.Now.Day + "-" + DateTime.Now.Month + "-" + DateTime.Now.Year + "_" + rnd.Next() + ".xlsx";

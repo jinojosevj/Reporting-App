@@ -398,6 +398,12 @@ namespace ReportingTool
                     objStock.Location = "0427";
                     dtStock = objStock.GetProfitAndLoss();
                     WriteToExcelPL(dtStock, xlSheet0427, "0427");
+
+                    Excel1.Worksheet xlSheet0428 = (Excel1.Worksheet)myExcelWorkbook.Sheets[34];
+                    xlSheet0428.Name = "0428";
+                    objStock.Location = "0428";
+                    dtStock = objStock.GetProfitAndLoss();
+                    WriteToExcelPL(dtStock, xlSheet0428, "0428");
                 }
                 else if(ddlCountry.SelectedItem.Text=="Jordan")
                 {
@@ -544,6 +550,12 @@ namespace ReportingTool
                     objStock.Location = "0419";
                     dtStock = objStock.GetProfitAndLoss();
                     WriteToExcelPL(dtStock, xlSheet0419, "0419");
+
+                    Excel1.Worksheet xlSheet0428 = (Excel1.Worksheet)myExcelWorkbook.Sheets[15];
+                    xlSheet0428.Name = "0428";
+                    objStock.Location = "0428";
+                    dtStock = objStock.GetProfitAndLoss();
+                    WriteToExcelPL(dtStock, xlSheet0428, "0428");
 
                 }
                 else if (ddlCountry.SelectedItem.Text == "Oman")

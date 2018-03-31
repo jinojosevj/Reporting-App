@@ -294,6 +294,22 @@ namespace ReportingTool
                 sw = new StreamWriter(@filePath, false);
                 ExportToCsv(dt, sw);
                 sw.Close();
+
+                SequenceNo++;
+                ObjStock.Location = "0427";
+                dt = ObjStock.GetSalesData();
+                filePath = Server.MapPath(".") + "\\SalesAndStock\\Sales\\" + "MESALES0" + SequenceNo;
+                sw = new StreamWriter(@filePath, false);
+                ExportToCsv(dt, sw);
+                sw.Close();
+
+                SequenceNo++;
+                ObjStock.Location = "0428";
+                dt = ObjStock.GetSalesData();
+                filePath = Server.MapPath(".") + "\\SalesAndStock\\Sales\\" + "MESALES0" + SequenceNo;
+                sw = new StreamWriter(@filePath, false);
+                ExportToCsv(dt, sw);
+                sw.Close();
             }
             lblMessage.Text = "Sales Files Generated";
             lblMessage.ForeColor = Color.Green;
@@ -493,6 +509,22 @@ namespace ReportingTool
 
                 SequenceNo++;
                 ObjStock.Location = "0426";
+                dt = ObjStock.GetStockData();
+                filePath = Server.MapPath(".") + "\\SalesAndStock\\Stock\\" + "MESYN00" + SequenceNo;
+                sw = new StreamWriter(@filePath, false);
+                ExportToCsv(dt, sw);
+                sw.Close();
+
+                SequenceNo++;
+                ObjStock.Location = "0427";
+                dt = ObjStock.GetStockData();
+                filePath = Server.MapPath(".") + "\\SalesAndStock\\Stock\\" + "MESYN00" + SequenceNo;
+                sw = new StreamWriter(@filePath, false);
+                ExportToCsv(dt, sw);
+                sw.Close();
+
+                SequenceNo++;
+                ObjStock.Location = "0428";
                 dt = ObjStock.GetStockData();
                 filePath = Server.MapPath(".") + "\\SalesAndStock\\Stock\\" + "MESYN00" + SequenceNo;
                 sw = new StreamWriter(@filePath, false);

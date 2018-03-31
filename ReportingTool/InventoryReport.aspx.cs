@@ -364,6 +364,11 @@ namespace ReportingTool
                 myExcelWorksheet.get_Range("BC" + j, misValue).Formula = (null != dtStock.Rows[i]["0427S%"]) ? dtStock.Rows[i]["0427S%"].ToString() : "0";
                 BorderAround(myExcelWorksheet.get_Range("BC" + j, misValue), System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Black));
 
+                myExcelWorksheet.get_Range("BD" + j, misValue).Formula = (null != dtStock.Rows[i]["0428"]) ? dtStock.Rows[i]["0428"].ToString() : "0";
+                BorderAround(myExcelWorksheet.get_Range("BD" + j, misValue), System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Black));
+
+                myExcelWorksheet.get_Range("BE" + j, misValue).Formula = (null != dtStock.Rows[i]["0428S%"]) ? dtStock.Rows[i]["0428S%"].ToString() : "0";
+                BorderAround(myExcelWorksheet.get_Range("BE" + j, misValue), System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Black));
 
                 k = i;
             }
@@ -545,7 +550,13 @@ namespace ReportingTool
 
             myExcelWorksheet.get_Range("BC" + j, misValue).Formula = "=SUM(BC3" + ":BC" + (j - 1) + ")";
             BorderAround(myExcelWorksheet.get_Range("BC" + j, misValue), System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Black));
-            
+
+            myExcelWorksheet.get_Range("BD" + j, misValue).Formula = "=SUM(BD3" + ":BD" + (j - 1) + ")";
+            BorderAround(myExcelWorksheet.get_Range("BD" + j, misValue), System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Black));
+
+            myExcelWorksheet.get_Range("BE" + j, misValue).Formula = "=SUM(BE3" + ":BE" + (j - 1) + ")";
+            BorderAround(myExcelWorksheet.get_Range("BE" + j, misValue), System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Black));
+
             return j;
         }
         #endregion Write To Excel Inventory Report

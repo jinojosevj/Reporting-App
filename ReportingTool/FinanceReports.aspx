@@ -51,6 +51,7 @@
                         <asp:ListItem Value="2" Text="Journal Entry Testing"></asp:ListItem>
                         <asp:ListItem Value="3" Text="Weighted Average Testing"></asp:ListItem>
                         <asp:ListItem Value="4" Text="Sales"></asp:ListItem>
+                        <asp:ListItem Value="5" Text="Stock Cost"></asp:ListItem>
 
                     </asp:DropDownList>
             </td>

@@ -40,6 +40,15 @@ namespace ReportingTool {
         protected global::System.Web.UI.WebControls.DropDownList ddlType;
         
         /// <summary>
+        /// trCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trCountry;
+        
+        /// <summary>
         /// ddlCountry control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace ReportingTool {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCountry;
+        
+        /// <summary>
+        /// trLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trLocation;
         
         /// <summary>
         /// ddlLocation control.
@@ -58,6 +76,15 @@ namespace ReportingTool {
         protected global::System.Web.UI.WebControls.DropDownList ddlLocation;
         
         /// <summary>
+        /// trPromotion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trPromotion;
+        
+        /// <summary>
         /// txtPromoNumbers control.
         /// </summary>
         /// <remarks>
@@ -67,6 +94,15 @@ namespace ReportingTool {
         protected global::System.Web.UI.WebControls.TextBox txtPromoNumbers;
         
         /// <summary>
+        /// trFromDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trFromDate;
+        
+        /// <summary>
         /// txtFromDate control.
         /// </summary>
         /// <remarks>
@@ -74,6 +110,15 @@ namespace ReportingTool {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFromDate;
+        
+        /// <summary>
+        /// trToDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trToDate;
         
         /// <summary>
         /// txtToDate control.

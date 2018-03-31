@@ -779,9 +779,9 @@ namespace ReportingTool
             {
 
                 myExcelWorksheet.get_Range("E" + j, misValue).Formula = (null != dtStock.Rows[i]["KidsSales"]) ? dtStock.Rows[i]["KidsSales"].ToString() : "0";
-                myExcelWorksheet.get_Range("I" + j, misValue).Formula = (null != dtStock.Rows[i]["HomeSales"]) ? dtStock.Rows[i]["HomeSales"].ToString() : "0";
+                myExcelWorksheet.get_Range("I" + j, misValue).Formula = (null != dtStock.Rows[i]["MensSales"]) ? dtStock.Rows[i]["MensSales"].ToString() : "0";
                 myExcelWorksheet.get_Range("M" + j, misValue).Formula = (null != dtStock.Rows[i]["LadiesSales"]) ? dtStock.Rows[i]["LadiesSales"].ToString() : "0";
-                myExcelWorksheet.get_Range("Q" + j, misValue).Formula = (null != dtStock.Rows[i]["MensSales"]) ? dtStock.Rows[i]["MensSales"].ToString() : "0";
+                myExcelWorksheet.get_Range("Q" + j, misValue).Formula = (null != dtStock.Rows[i]["HomeSales"]) ? dtStock.Rows[i]["HomeSales"].ToString() : "0";
 
                 myExcelWorksheet.get_Range("U" + j, misValue).Formula = (null != dtStock.Rows[i]["FootSales"]) ? dtStock.Rows[i]["FootSales"].ToString() : "0";
                 myExcelWorksheet.get_Range("Y" + j, misValue).Formula = (null != dtStock.Rows[i]["EssentialSales"]) ? dtStock.Rows[i]["EssentialSales"].ToString() : "0";
@@ -790,9 +790,9 @@ namespace ReportingTool
                 //Last Year
 
                 myExcelWorksheet.get_Range("AP" + j, misValue).Formula = (null != dtStock.Rows[i]["KidsSalesLY"]) ? dtStock.Rows[i]["KidsSalesLY"].ToString() : "0";
-                myExcelWorksheet.get_Range("AQ" + j, misValue).Formula = (null != dtStock.Rows[i]["HomeSalesLY"]) ? dtStock.Rows[i]["HomeSalesLY"].ToString() : "0";
+                myExcelWorksheet.get_Range("AQ" + j, misValue).Formula = (null != dtStock.Rows[i]["MensSalesLY"]) ? dtStock.Rows[i]["MensSalesLY"].ToString() : "0";
                 myExcelWorksheet.get_Range("AR" + j, misValue).Formula = (null != dtStock.Rows[i]["LadiesSalesLY"]) ? dtStock.Rows[i]["LadiesSalesLY"].ToString() : "0";
-                myExcelWorksheet.get_Range("AS" + j, misValue).Formula = (null != dtStock.Rows[i]["MensSalesLY"]) ? dtStock.Rows[i]["MensSalesLY"].ToString() : "0";
+                myExcelWorksheet.get_Range("AS" + j, misValue).Formula = (null != dtStock.Rows[i]["HomeSalesLY"]) ? dtStock.Rows[i]["HomeSalesLY"].ToString() : "0";
 
                 myExcelWorksheet.get_Range("AT" + j, misValue).Formula = (null != dtStock.Rows[i]["FootSalesLY"]) ? dtStock.Rows[i]["FootSalesLY"].ToString() : "0";
                 myExcelWorksheet.get_Range("AU" + j, misValue).Formula = (null != dtStock.Rows[i]["EssentialSalesLY"]) ? dtStock.Rows[i]["EssentialSalesLY"].ToString() : "0";

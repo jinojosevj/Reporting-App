@@ -496,6 +496,12 @@ namespace Test
                     if (dtStock.Rows.Count > 0)
                         WriteToExcel(dtStock, xlSheet0427, "0427");
 
+                    Excel1.Worksheet xlSheet0428 = (Excel1.Worksheet)myExcelWorkbook.Sheets[33];
+                    xlSheet0428.Name = "0428";
+                    dtStock = objStock.GetAllStockValues("0428");
+                    if (dtStock.Rows.Count > 0)
+                        WriteToExcel(dtStock, xlSheet0428, "0428");
+
 
                     lblMessage.Visible = true;
                     lblMessage.ForeColor = System.Drawing.Color.Green;
@@ -1549,6 +1555,12 @@ namespace Test
                 dtStock = objStock.GetAllStockValuesLCP("0427");
                 if (dtStock.Rows.Count > 0)
                     WriteToExcelLCP(dtStock, xlSheet0427, "0427");
+
+                Excel1.Worksheet xlSheet0428 = (Excel1.Worksheet)myExcelWorkbook.Sheets[33];
+                xlSheet0428.Name = "0428";
+                dtStock = objStock.GetAllStockValuesLCP("0428");
+                if (dtStock.Rows.Count > 0)
+                    WriteToExcelLCP(dtStock, xlSheet0428, "0428");
 
 
                 objStock.FromDate = DateTime.ParseExact(txtFromDate.Text.Trim().ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
@@ -3181,21 +3193,28 @@ namespace Test
                 if (dtStock.Rows.Count > 0)
                     WriteToExcelPgCmp(dtStock, xlSheet0431);
 
+                Excel1.Worksheet xlSheet0432 = (Excel1.Worksheet)myExcelWorkbook.Sheets[26];
+                xlSheet0432.Name = "0428";
+                objStock.Location = "0428";
+                dtStock = objStock.GetPgCmpReport();
+                if (dtStock.Rows.Count > 0)
+                    WriteToExcelPgCmp(dtStock, xlSheet0432);
 
 
-                Excel1.Worksheet xlSheet0422 = (Excel1.Worksheet)myExcelWorkbook.Sheets[26];
+
+                Excel1.Worksheet xlSheet0422 = (Excel1.Worksheet)myExcelWorkbook.Sheets[27];
                 xlSheet0422.Name = "JORDAN";
                 objStock.Location = "JORDAN";
                 dtStock = objStock.GetPgCmpReport();
                 WriteToExcelPgCmp(dtStock, xlSheet0422);
 
-                Excel1.Worksheet xlSheet0423 = (Excel1.Worksheet)myExcelWorkbook.Sheets[27];
+                Excel1.Worksheet xlSheet0423 = (Excel1.Worksheet)myExcelWorkbook.Sheets[28];
                 xlSheet0423.Name = "UAE";
                 objStock.Location = "UAE";
                 dtStock = objStock.GetPgCmpReport();
                 WriteToExcelPgCmp(dtStock, xlSheet0423);
 
-                Excel1.Worksheet xlSheet0424 = (Excel1.Worksheet)myExcelWorkbook.Sheets[28];
+                Excel1.Worksheet xlSheet0424 = (Excel1.Worksheet)myExcelWorkbook.Sheets[29];
                 xlSheet0424.Name = "OMAN";
                 objStock.Location = "OMAN";
                 dtStock = objStock.GetPgCmpReport();
@@ -3204,7 +3223,7 @@ namespace Test
                     WriteToExcelPgCmp(dtStock, xlSheet0424);
                 }
 
-                Excel1.Worksheet xlSheetBah = (Excel1.Worksheet)myExcelWorkbook.Sheets[29];
+                Excel1.Worksheet xlSheetBah = (Excel1.Worksheet)myExcelWorkbook.Sheets[30];
                 xlSheetBah.Name = "BAHRAIN";
                 objStock.Location = "BAHRAIN";
                 dtStock = objStock.GetPgCmpReport();
@@ -3213,14 +3232,14 @@ namespace Test
                     WriteToExcelPgCmp(dtStock, xlSheetBah);
                 }
 
-                Excel1.Worksheet xlSheet0425 = (Excel1.Worksheet)myExcelWorkbook.Sheets[30];
+                Excel1.Worksheet xlSheet0425 = (Excel1.Worksheet)myExcelWorkbook.Sheets[31];
                 xlSheet0425.Name = "SUMMARY";
                 objStock.Location = "Summery";
                 dtStock = objStock.GetPgCmpReport();
                 WriteToExcelPgCmp(dtStock, xlSheet0425);
 
                 
-                Excel1.Worksheet xlSheet0428 = (Excel1.Worksheet)myExcelWorkbook.Sheets[31];
+                Excel1.Worksheet xlSheet0428 = (Excel1.Worksheet)myExcelWorkbook.Sheets[32];
                 xlSheet0428.Name = "SUMMARY-DIVISON";
                 dtStock = objStock.GetPgcmpSummaryByDivision();
                 WriteToExcelPgCmpDivision(dtStock, xlSheet0428);

@@ -144,6 +144,7 @@
                         <asp:ListItem Value="2015" Text="2015-2016"></asp:ListItem>
                         <asp:ListItem Value="2016" Text="2016-2017"></asp:ListItem>
                         <asp:ListItem Value="2017" Text="2017-2018"></asp:ListItem>
+                        <asp:ListItem Value="2018" Text="2018-2019"></asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>

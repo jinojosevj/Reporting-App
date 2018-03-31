@@ -127,6 +127,8 @@ namespace Test
 
                                 || DtSource.Rows[i]["StoreNo"].ToString() == "0425"
                                 || DtSource.Rows[i]["StoreNo"].ToString() == "0426"
+                                || DtSource.Rows[i]["StoreNo"].ToString() == "0427"
+                                || DtSource.Rows[i]["StoreNo"].ToString() == "0428"
                                 )
                             {
                                 fileFormat = true; 
@@ -166,6 +168,9 @@ namespace Test
                                 || DtSource.Rows[i]["Entrance"].ToString() == "0425-02"
                                 || DtSource.Rows[i]["Entrance"].ToString() == "0425-03"
                                 || DtSource.Rows[i]["Entrance"].ToString() == "0426-01"
+
+                                || DtSource.Rows[i]["Entrance"].ToString() == "0427-01"
+                                || DtSource.Rows[i]["Entrance"].ToString() == "0428-01"
                                 )
                             {
                                 fileFormat = true;
@@ -493,6 +498,22 @@ namespace Test
                 if (dtVisitors.Rows.Count > 0)
                 {
                     WriteToExcel(dtVisitors, xlSheet0426, "0426");
+                }
+
+                Excel1.Worksheet xlSheet0427 = (Excel1.Worksheet)myExcelWorkbook.Sheets[16];
+                xlSheet0427.Name = "0427";
+                dtVisitors = objStock.GetVisitorsReport("0427");
+                if (dtVisitors.Rows.Count > 0)
+                {
+                    WriteToExcel(dtVisitors, xlSheet0427, "0427");
+                }
+
+                Excel1.Worksheet xlSheet0428 = (Excel1.Worksheet)myExcelWorkbook.Sheets[17];
+                xlSheet0428.Name = "0428";
+                dtVisitors = objStock.GetVisitorsReport("0428");
+                if (dtVisitors.Rows.Count > 0)
+                {
+                    WriteToExcel(dtVisitors, xlSheet0428, "0428");
                 }
 
                 lblMessage.Visible = true;
@@ -1031,9 +1052,51 @@ namespace Test
                     if (dtVisitor.Rows.Count > 0)
                         WriteToExcelWeekly(dtVisitor, xlSheet0426, "0426", 39, Week3);
 
-                                        
 
-                    lblMessage.Visible = true;
+
+                //0427
+
+                Excel1.Worksheet xlSheet0427 = (Excel1.Worksheet)myExcelWorkbook.Sheets[16];
+                xlSheet0427.Name = "0427";
+                dtVisitor = objVisitors.GetVisitorsWeeklyReport("0427", Week0);
+                if (dtVisitor.Rows.Count > 0)
+                    WriteToExcelWeekly(dtVisitor, xlSheet0427, "0427", 6, Week0);
+
+                dtVisitor = objVisitors.GetVisitorsWeeklyReport("0427", Week1);
+                if (dtVisitor.Rows.Count > 0)
+                    WriteToExcelWeekly(dtVisitor, xlSheet0427, "0427", 17, Week1);
+
+                dtVisitor = objVisitors.GetVisitorsWeeklyReport("0427", Week2);
+                if (dtVisitor.Rows.Count > 0)
+                    WriteToExcelWeekly(dtVisitor, xlSheet0427, "0427", 28, Week2);
+
+                dtVisitor = objVisitors.GetVisitorsWeeklyReport("0427", Week3);
+                if (dtVisitor.Rows.Count > 0)
+                    WriteToExcelWeekly(dtVisitor, xlSheet0427, "0427", 39, Week3);
+
+                //0428
+
+                Excel1.Worksheet xlSheet0428 = (Excel1.Worksheet)myExcelWorkbook.Sheets[17];
+                xlSheet0428.Name = "0428";
+                dtVisitor = objVisitors.GetVisitorsWeeklyReport("0428", Week0);
+                if (dtVisitor.Rows.Count > 0)
+                    WriteToExcelWeekly(dtVisitor, xlSheet0428, "0428", 6, Week0);
+
+                dtVisitor = objVisitors.GetVisitorsWeeklyReport("0428", Week1);
+                if (dtVisitor.Rows.Count > 0)
+                    WriteToExcelWeekly(dtVisitor, xlSheet0428, "0428", 17, Week1);
+
+                dtVisitor = objVisitors.GetVisitorsWeeklyReport("0428", Week2);
+                if (dtVisitor.Rows.Count > 0)
+                    WriteToExcelWeekly(dtVisitor, xlSheet0428, "0428", 28, Week2);
+
+                dtVisitor = objVisitors.GetVisitorsWeeklyReport("0428", Week3);
+                if (dtVisitor.Rows.Count > 0)
+                    WriteToExcelWeekly(dtVisitor, xlSheet0428, "0428", 39, Week3);
+
+
+
+                lblMessage.Visible = true;
                     lblMessage.ForeColor = System.Drawing.Color.Green;
                     lblMessage.Text = "Report Generation Complete";
                     btnDownloadWeekly.Visible = true;

@@ -65,9 +65,11 @@ namespace ReportingTool
 
                 ExportToCsv(dt, sw);
                 sw.Close();
+
+                btnDownload.Visible = true;
             }
 
-            btnDownload.Visible = true;
+            
             lblMessage.Text = "Report Generated";
             lblMessage.ForeColor = Color.Green;
         }
@@ -86,6 +88,55 @@ namespace ReportingTool
             FileDownload(fileName);
         }
         #endregion btnDownload_Click
+
+        #region ddlType_SelectedIndexChanged
+        /// <summary>
+        /// ddlType_SelectedIndexChanged
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void ddlType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            trCountry.Visible = false;
+            trLocation.Visible = false;
+            trPromotion.Visible = false;
+            trFromDate.Visible = false;
+            trToDate.Visible = false;
+
+            ViewState["FileName"] = null;
+            btnDownload.Visible = false;
+
+            switch (ddlType.SelectedItem.Value)
+            {
+                case "1":trCountry.Visible = true;
+                         trLocation.Visible = true;
+                         trToDate.Visible = true;
+                    break;
+                case "3":
+                        trFromDate.Visible = true;
+                        trToDate.Visible = true;
+                        break;
+                case "4":
+                        trPromotion.Visible = true;
+                        break;
+                case "5":
+                        trCountry.Visible = true;
+                        trLocation.Visible = true;
+                        trFromDate.Visible = true;
+                        trToDate.Visible = true;
+                        break;
+                case "6":
+                        trCountry.Visible = true;
+                        trLocation.Visible = true;
+                        trFromDate.Visible = true;
+                        trToDate.Visible = true;
+                        break;
+                case "7":
+                        trCountry.Visible = true;
+                        break;
+            }
+        }
+        #endregion ddlType_SelectedIndexChanged
 
         #endregion Events
 
@@ -168,5 +219,6 @@ namespace ReportingTool
 
         #endregion Methods
 
+        
     }
 }
